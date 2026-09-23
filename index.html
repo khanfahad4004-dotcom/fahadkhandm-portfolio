@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fahad Khan Dm — Digital Marketing Agency & Performance Growth</title>
+  <meta name="description" content="Portfolio and high-converting marketing agency website for Fahad Khan Dm specializing in Meta Ads, Google Ads, Branding, AI UGC Videos, and E-commerce growth." />
+  
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fahad Khan Dm — Digital Marketing Agency & Performance Growth" />
+  <meta property="og:description" content="Scaling brands with data-backed Meta & Google Ads, AI UGC creatives, and full-funnel conversion optimization." />
+  <meta property="og:image" content="images/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fahad Khan Dm — Digital Marketing Agency & Performance Growth" />
+  <meta name="twitter:description" content="Scaling brands with data-backed Meta & Google Ads, AI UGC creatives, and full-funnel conversion optimization." />
+
+  <!-- Meta Pixel Base Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Google Fonts: Plus Jakarta Sans & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Syne', 'sans-serif'],
+          },
+          colors: {
+            canvas: '#F9F9F7',
+            surface: '#FFFFFF',
+            charcoal: '#111111',
+            charcoalSoft: '#222222',
+            borderSubtle: '#E5E5DF',
+            muted: '#5E5E58',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F9F9F7;
+      color: #111111;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display {
+      font-family: 'Syne', sans-serif;
+    }
+    /* Hide non-active views */
+    .page-view {
+      display: none;
+      animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .page-view.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* YouTube Shorts Responsive Ratio */
+    .aspect-shorts {
+      aspect-ratio: 9 / 16;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-charcoal flex flex-col min-h-screen selection:bg-charcoal selection:text-white">
+
+  <!-- Meta Pixel NoScript Fallback -->
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" alt="Meta Pixel" />
+  </noscript>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+
+  <!-- Global Header / Top Bar (Strict 3-Zone Contract) -->
+  <header class="sticky top-0 z-40 bg-canvas/90 backdrop-blur-md border-b border-borderSubtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Zone 1: Single text element wordmark -->
+      <a href="#home" class="text-xl sm:text-2xl font-bold tracking-tight text-charcoal font-display">
+        Fahad Khan Dm
+      </a>
+
+      <!-- Zone 2: Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
+        <a href="#home" class="nav-link transition-colors hover:text-charcoal py-1 border-b-2 border-transparent" data-page="home">Home</a>
+        <a href="#about" class="nav-link transition-colors hover:text-charcoal py-1 border-b-2 border-transparent" data-page="about">About</a>
+        <a href="#portfolio" class="nav-link transition-colors hover:text-charcoal py-1 border-b-2 border-transparent" data-page="portfolio">Portfolio</a>
+        <a href="#contact" class="nav-link transition-colors hover:text-charcoal py-1 border-b-2 border-transparent" data-page="contact">Contact</a>
+      </nav>
+
+      <!-- Zone 3: Primary Action & Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-charcoal rounded-md hover:bg-charcoalSoft transition-all shadow-sm">
+          Get In Touch
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md border border-borderSubtle text-charcoal hover:bg-stone-100 transition-colors" aria-label="Toggle Navigation Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-borderSubtle bg-surface px-4 pt-3 pb-6 space-y-3">
+      <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-charcoal hover:bg-stone-50" data-page="home">Home</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-charcoal hover:bg-stone-50" data-page="about">About</a>
+      <a href="#portfolio" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-charcoal hover:bg-stone-50" data-page="portfolio">Portfolio</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-charcoal hover:bg-stone-50" data-page="contact">Contact</a>
+      <div class="pt-2">
+        <a href="#contact" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-charcoal rounded-md hover:bg-charcoalSoft transition-all">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER FOR VIEWS -->
+  <main class="flex-grow">
+
+    <!-- ========================================== -->
+    <!-- 1. HOME PAGE VIEW -->
+    <!-- ========================================== -->
+    <div id="page-home" class="page-view active">
+      
+      <!-- Hero Section -->
+      <section class="relative pt-16 pb-20 sm:pt-24 sm:pb-28 border-b border-borderSubtle overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-4">
+              Digital Marketing & AI Growth Architect
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-charcoal font-display leading-[1.08] text-balance mb-6">
+              Scalable Paid Acquisition & AI Creative Systems That Turn Traffic Into Consistent Profit.
+            </h1>
+            <p class="text-lg sm:text-xl text-muted leading-relaxed mb-8 max-w-2xl">
+              I help e-commerce brands and modern businesses scale predictably with data-backed Meta & Google Ads, hyper-converting AI video UGC, and full-funnel conversion optimization.
+            </p>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide text-white bg-charcoal rounded-md hover:bg-charcoalSoft transition-all shadow-sm">
+                Claim Free Strategy Call
+              </a>
+              <a href="#portfolio" class="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide text-charcoal bg-surface border border-borderSubtle rounded-md hover:border-charcoal transition-all">
+                View Proven Results
+              </a>
+            </div>
+          </div>
+
+          <!-- Proof Metrics Bar -->
+          <div class="mt-16 pt-10 border-t border-borderSubtle grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-charcoal tabular-nums">5.8x</div>
+              <div class="text-xs text-muted mt-1 uppercase tracking-wider">Peak Campaign ROAS</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-charcoal tabular-nums">$450K+</div>
+              <div class="text-xs text-muted mt-1 uppercase tracking-wider">Client Revenue Scaled</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-charcoal tabular-nums">70%</div>
+              <div class="text-xs text-muted mt-1 uppercase tracking-wider">Faster AI Ad Iteration</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-charcoal tabular-nums">100%</div>
+              <div class="text-xs text-muted mt-1 uppercase tracking-wider">Direct Accountability</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- E-commerce & Marketing Importance Section -->
+      <section class="py-20 sm:py-28 border-b border-borderSubtle bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-14">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Why Growth Demands Precision</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-charcoal font-display text-balance">
+              The Reality of Modern Digital & E-Commerce Marketing
+            </h2>
+            <p class="text-muted mt-4 text-base sm:text-lg leading-relaxed">
+              Relying on random social posts or unoptimized ad spend burns capital. Winning businesses build cohesive customer acquisition engines.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Impact Card 1 -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-canvas flex flex-col justify-between hover:border-charcoal/40 transition-colors">
+              <div>
+                <div class="w-10 h-10 rounded-md bg-charcoal text-white flex items-center justify-center font-bold text-sm mb-6">01</div>
+                <h3 class="text-xl font-bold text-charcoal mb-3">Organic Reach Is Throttled — Paid Media Is Your Growth Lever</h3>
+                <p class="text-sm text-muted leading-relaxed">
+                  Platform algorithms prioritize monetization. Waiting for viral organic growth leaves revenue up to chance. Precision audience segmentation and paid media funnels guarantee predictable, scalable acquisition every single day.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-borderSubtle text-xs text-muted">
+                Meta & Google Ads Engine
+              </div>
+            </div>
+
+            <!-- Impact Card 2 -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-canvas flex flex-col justify-between hover:border-charcoal/40 transition-colors">
+              <div>
+                <div class="w-10 h-10 rounded-md bg-charcoal text-white flex items-center justify-center font-bold text-sm mb-6">02</div>
+                <h3 class="text-xl font-bold text-charcoal mb-3">Creative Velocity Is The New Targeting</h3>
+                <p class="text-sm text-muted leading-relaxed">
+                  In modern algorithmic bidding, creative is what finds your customer. Utilizing cutting-edge AI UGC workflows, high-hook video testing, and rapid iterations slashes Customer Acquisition Cost (CPA) by up to 40%.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-borderSubtle text-xs text-muted">
+                AI Video & High-CTR Assets
+              </div>
+            </div>
+
+            <!-- Impact Card 3 -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-canvas flex flex-col justify-between hover:border-charcoal/40 transition-colors">
+              <div>
+                <div class="w-10 h-10 rounded-md bg-charcoal text-white flex items-center justify-center font-bold text-sm mb-6">03</div>
+                <h3 class="text-xl font-bold text-charcoal mb-3">Full-Funnel Economics Over Vanity Impressions</h3>
+                <p class="text-sm text-muted leading-relaxed">
+                  Likes and views never pay the bills. We obsess over bottom-line financial metrics: blended ROAS, Average Order Value (AOV), seamless Shopify/WordPress checkouts, and customer retention to build lasting enterprise value.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-borderSubtle text-xs text-muted">
+                Conversion & Unit Economics
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Services Section -->
+      <section class="py-20 sm:py-28 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+            <div class="max-w-2xl">
+              <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Comprehensive Capabilities</div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-charcoal font-display">
+                Core Services Engineered for Revenue
+              </h2>
+            </div>
+            <p class="text-muted text-sm sm:text-base max-w-md mt-4 md:mt-0">
+              End-to-end execution from campaign architecture and AI content production to high-converting web storefronts.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            
+            <!-- Service 1: Digital Marketing -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-surface hover:shadow-md transition-all">
+              <div class="text-xs font-mono text-muted mb-2">01 / MEDIA BUYING</div>
+              <h3 class="text-xl font-bold text-charcoal mb-3">Digital Marketing</h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                Data-backed Meta (Facebook & Instagram) and Google Ads media buying. Custom audience testing, campaign budget optimization (CBO), and full-funnel retargeting strategies that maximize blended ROAS.
+              </p>
+              <ul class="text-xs text-muted space-y-2 border-t border-borderSubtle pt-4">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Meta & Google Campaign Setup</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Audience Architecture & Lookalikes</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>CPA Reduction & Budget Scaling</li>
+              </ul>
+            </div>
+
+            <!-- Service 2: Branding -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-surface hover:shadow-md transition-all">
+              <div class="text-xs font-mono text-muted mb-2">02 / IDENTITY</div>
+              <h3 class="text-xl font-bold text-charcoal mb-3">Branding</h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                Distinct brand positioning, visual style guides, and high-impact messaging frameworks that differentiate your business in crowded markets and command premium price points.
+              </p>
+              <ul class="text-xs text-muted space-y-2 border-t border-borderSubtle pt-4">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Strategic Value Proposition</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Visual Identity & Style Guidelines</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Conversion-Focused Copy Tone</li>
+              </ul>
+            </div>
+
+            <!-- Service 3: Graphic Designing -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-surface hover:shadow-md transition-all">
+              <div class="text-xs font-mono text-muted mb-2">03 / CREATIVE ASSETS</div>
+              <h3 class="text-xl font-bold text-charcoal mb-3">Graphic Designing</h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                Thumb-stopping ad creatives, promotional carousels, display banners, and social feed assets engineered specifically for click-through rate (CTR) and audience engagement.
+              </p>
+              <ul class="text-xs text-muted space-y-2 border-t border-borderSubtle pt-4">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>High-CTR Social Ad Creatives</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>E-Commerce Catalog Banners</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Brand Collateral & Infographics</li>
+              </ul>
+            </div>
+
+            <!-- Service 4: AI Video Editing -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-surface hover:shadow-md transition-all">
+              <div class="text-xs font-mono text-muted mb-2">04 / NEXT-GEN VIDEO</div>
+              <h3 class="text-xl font-bold text-charcoal mb-3">AI Video Editing</h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                High-converting AI-powered UGC video ads, short-form reels, and explainers produced using advanced HeyGen, Higgsfield, and Claude scripting workflows for 3x engagement.
+              </p>
+              <ul class="text-xs text-muted space-y-2 border-t border-borderSubtle pt-4">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>AI UGC Avatar & Voice Generation</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Viral Short-Form Hook Testing</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Dynamic Subtitles & B-Roll Pacing</li>
+              </ul>
+            </div>
+
+            <!-- Service 5: WordPress Development -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-surface hover:shadow-md transition-all">
+              <div class="text-xs font-mono text-muted mb-2">05 / WEB PLATFORMS</div>
+              <h3 class="text-xl font-bold text-charcoal mb-3">WordPress Website Development</h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                Bespoke, lightning-fast WordPress websites built for high conversion, technical SEO, mobile responsiveness, and seamless integration with your marketing stack.
+              </p>
+              <ul class="text-xs text-muted space-y-2 border-t border-borderSubtle pt-4">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Custom Responsive Architecture</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Speed Optimization & Technical SEO</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Lead Capture & CRM Integrations</li>
+              </ul>
+            </div>
+
+            <!-- Service 6: Shopify Development -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-surface hover:shadow-md transition-all">
+              <div class="text-xs font-mono text-muted mb-2">06 / E-COMMERCE</div>
+              <h3 class="text-xl font-bold text-charcoal mb-3">Shopify Store Development</h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                Conversion-optimized Shopify stores tailored for domestic and international dropshipping or DTC brands. Frictionless checkout, upsell logic, and high AOV architectures.
+              </p>
+              <ul class="text-xs text-muted space-y-2 border-t border-borderSubtle pt-4">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>High-Converting Product Page UX</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Cart Drawer & In-Cart Upsell Flows</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-charcoal"></span>Tracking Pixel & GA4 Setup</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips & Strategies Video Section -->
+      <section class="py-20 sm:py-28 border-b border-borderSubtle bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Actionable Insights</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-charcoal font-display">
+              Marketing Tips & Strategic Breakdowns
+            </h2>
+            <p class="text-muted mt-4 text-base">
+              Watch real tactical breakdowns on media buying, AI creative generation, and campaign scalability.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+            
+            <!-- Video 1 Card -->
+            <div class="bg-canvas border border-borderSubtle rounded-xl p-4 sm:p-6 flex flex-col">
+              <div class="relative w-full aspect-shorts max-w-xs mx-auto overflow-hidden rounded-lg bg-black shadow-inner">
+                <iframe 
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/h0sddYTbd9s" 
+                  title="Marketing Tip & Strategy 1 - Fahad Khan Dm" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="mt-5 text-center sm:text-left">
+                <div class="text-xs font-mono text-muted mb-1">STRATEGY BREAKDOWN #1</div>
+                <h3 class="text-lg font-bold text-charcoal">High-Converting Ad Hooks & Structure</h3>
+                <p class="text-xs text-muted mt-2 leading-relaxed">
+                  Key patterns that capture user attention within the critical first 3 seconds of paid social video ads.
+                </p>
+              </div>
+            </div>
+
+            <!-- Video 2 Card -->
+            <div class="bg-canvas border border-borderSubtle rounded-xl p-4 sm:p-6 flex flex-col">
+              <div class="relative w-full aspect-shorts max-w-xs mx-auto overflow-hidden rounded-lg bg-black shadow-inner">
+                <iframe 
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/X8iQQqti1Kg" 
+                  title="Marketing Tip & Strategy 2 - Fahad Khan Dm" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="mt-5 text-center sm:text-left">
+                <div class="text-xs font-mono text-muted mb-1">STRATEGY BREAKDOWN #2</div>
+                <h3 class="text-lg font-bold text-charcoal">AI Video Workflows & Scalable UGC</h3>
+                <p class="text-xs text-muted mt-2 leading-relaxed">
+                  How modern AI tools accelerate creative testing without spending thousands on traditional video production.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Home Lead Capture Form Section -->
+      <section id="contact-form-section" class="py-20 sm:py-28 border-b border-borderSubtle">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Direct Engagement</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-charcoal font-display">
+              Ready To Scale? Let's Talk Strategy.
+            </h2>
+            <p class="text-muted mt-3 text-base">
+              Share your current business challenges below. Fahad will review your numbers and get back to you within 2 hours.
+            </p>
+          </div>
+
+          <div class="bg-surface p-6 sm:p-10 rounded-xl border border-borderSubtle shadow-sm">
+            <!-- PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE -->
+            <form id="home-lead-form" class="space-y-6" novalidate>
+              <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+              <input type="hidden" name="subject" value="New Growth Lead from Fahad Khan Dm Website" />
+              <input type="hidden" name="from_name" value="Fahad Khan Dm Portfolio" />
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Full Name -->
+                <div>
+                  <label for="home-your_name" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                    Your Name <span class="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="home-your_name" 
+                    name="your_name" 
+                    required 
+                    placeholder="e.g. Tariq Ahmed"
+                    class="w-full px-4 py-3 rounded-md bg-canvas border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors"
+                  />
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="home-email" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                    Your Email <span class="text-red-500">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="home-email" 
+                    name="email" 
+                    required 
+                    placeholder="e.g. tariq@business.com"
+                    class="w-full px-4 py-3 rounded-md bg-canvas border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors"
+                  />
+                </div>
+              </div>
+
+              <!-- Business Name -->
+              <div>
+                <label for="home-business_name" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                  Your Business Name <span class="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="home-business_name" 
+                  name="business_name" 
+                  required 
+                  placeholder="e.g. Spark Apparel / ElectroMart"
+                  class="w-full px-4 py-3 rounded-md bg-canvas border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors"
+                />
+              </div>
+
+              <!-- Problem Facing -->
+              <div>
+                <label for="home-problem_facing" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                  What Problem Is Your Business Facing? <span class="text-red-500">*</span>
+                </label>
+                <textarea 
+                  id="home-problem_facing" 
+                  name="problem_facing" 
+                  rows="4" 
+                  required 
+                  placeholder="Tell me about your ad spend, ROAS bottlenecks, conversion rates, or scaling goals..."
+                  class="w-full px-4 py-3 rounded-md bg-canvas border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors resize-y"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div>
+                <button 
+                  type="submit" 
+                  id="home-submit-btn"
+                  class="w-full flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold tracking-wider uppercase text-white bg-charcoal rounded-md hover:bg-charcoalSoft active:scale-[0.99] transition-all cursor-pointer"
+                >
+                  <span class="btn-text">Submit Growth Inquiry</span>
+                  <svg class="btn-spinner hidden animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="text-center text-xs text-muted flex items-center justify-center gap-2 pt-2">
+                <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Zero spam guarantee. All business metrics and data remain strictly confidential.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. ABOUT PAGE VIEW -->
+    <!-- ========================================== -->
+    <div id="page-about" class="page-view">
+      
+      <!-- Profile & Bio Section -->
+      <section class="py-16 sm:py-24 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Profile Image Container -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="relative w-72 h-72 sm:w-88 sm:h-88 rounded-2xl overflow-hidden border border-borderSubtle bg-stone-100 shadow-sm group">
+                <img 
+                  src="images/profile.jpg" 
+                  alt="Fahad Khan Dm - Digital Marketing Strategist" 
+                  class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                  onerror="this.onerror=null; this.src='images/profile.png';"
+                />
+                <div class="absolute bottom-3 left-3 right-3 bg-charcoal/90 backdrop-blur-md text-white text-xs py-2 px-3 rounded-md flex items-center justify-between">
+                  <span class="font-medium">Fahad Khan Dm</span>
+                  <span class="text-emerald-400 font-mono text-[10px]">● Active Strategist</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bio Copy -->
+            <div class="lg:col-span-7">
+              <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">About The Strategist</div>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-charcoal font-display mb-6">
+                Fahad Khan Dm
+              </h1>
+
+              <!-- Bio Quote Requirement -->
+              <blockquote class="text-lg sm:text-xl text-charcoal font-medium leading-relaxed mb-6 border-l-2 border-charcoal pl-5">
+                "I’m a Digital Marketing Aspirant skilled in Meta Ads, Google Ads, Social Media Management, and AI-powered content creation. I focus on building online presence, reaching the right audience, and driving meaningful business results."
+              </blockquote>
+
+              <p class="text-muted text-sm sm:text-base leading-relaxed mb-6">
+                Digital marketing is no longer about throwing budgets at standard ads and praying for conversions. It is an engineering discipline that links psychological customer triggers with high-speed AI creative testing and disciplined unit economics.
+              </p>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-borderSubtle text-xs">
+                <div>
+                  <div class="font-bold text-charcoal">Core Focus</div>
+                  <div class="text-muted mt-1">Paid Ads & AI Creative</div>
+                </div>
+                <div>
+                  <div class="font-bold text-charcoal">Experience</div>
+                  <div class="text-muted mt-1">Multiple Scaled Brands</div>
+                </div>
+                <div>
+                  <div class="font-bold text-charcoal">Location</div>
+                  <div class="text-muted mt-1">Pakistan · Worldwide Clients</div>
+                </div>
+              </div>
+
+              <div class="mt-8 flex items-center gap-4">
+                <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-charcoal rounded-md hover:bg-charcoalSoft transition-all">
+                  Discuss A Project
+                </a>
+                <a href="#portfolio" class="inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-wider text-charcoal border border-borderSubtle rounded-md hover:border-charcoal transition-all">
+                  Explore Case Studies
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Proven Results Showcase -->
+      <section class="py-20 sm:py-28 border-b border-borderSubtle bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-12">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Verified Performance</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-charcoal font-display">
+              Proven Results Showcase
+            </h2>
+            <p class="text-muted mt-3 text-base">
+              Real screenshots and metrics from managed Meta and Google Ad accounts showing consistent scaling, profitable ROAS, and compounding revenue.
+            </p>
+          </div>
+
+          <!-- Grid Container for Ad Account Screenshots -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Result 1 -->
+            <div class="border border-borderSubtle rounded-xl overflow-hidden bg-canvas flex flex-col group cursor-pointer" onclick="openImageModal('images/result-1.jpg', '5.8x ROAS E-Commerce Meta Ad Campaign')">
+              <div class="relative aspect-[4/3] bg-stone-900 overflow-hidden">
+                <img 
+                  src="images/result-1.jpg" 
+                  alt="Meta Ad Account Results 1 - Fahad Khan Dm" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.onerror=null; this.src='images/result-1.png';"
+                />
+                <div class="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-surface text-charcoal text-xs font-semibold px-3 py-1.5 rounded-md shadow">Click to Inspect</span>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <div class="text-[11px] font-mono text-muted mb-1">CAMPAIGN 01 · META ADS</div>
+                  <h3 class="text-base font-bold text-charcoal">5.8x ROAS E-Commerce Scaling</h3>
+                  <p class="text-xs text-muted mt-2 leading-relaxed">
+                    Scaled purchase volume with high-converting AI UGC video creatives and catalog retargeting funnels.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-borderSubtle flex items-center justify-between text-xs">
+                  <span class="text-muted">Return On Ad Spend</span>
+                  <span class="font-bold text-emerald-600 tabular-nums">5.8x ROAS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result 2 -->
+            <div class="border border-borderSubtle rounded-xl overflow-hidden bg-canvas flex flex-col group cursor-pointer" onclick="openImageModal('images/result-2.jpg', 'Google & Meta Omni-Channel Ad Growth')">
+              <div class="relative aspect-[4/3] bg-stone-900 overflow-hidden">
+                <img 
+                  src="images/result-2.jpg" 
+                  alt="Ad Account Results 2 - Fahad Khan Dm" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.onerror=null; this.src='images/result-2.png';"
+                />
+                <div class="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-surface text-charcoal text-xs font-semibold px-3 py-1.5 rounded-md shadow">Click to Inspect</span>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <div class="text-[11px] font-mono text-muted mb-1">CAMPAIGN 02 · GOOGLE & META</div>
+                  <h3 class="text-base font-bold text-charcoal">Omni-Channel Lead & Sales Surge</h3>
+                  <p class="text-xs text-muted mt-2 leading-relaxed">
+                    Captured high-intent search traffic on Google while scaling awareness with Instagram and Facebook ads.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-borderSubtle flex items-center justify-between text-xs">
+                  <span class="text-muted">Monthly Revenue Impact</span>
+                  <span class="font-bold text-charcoal tabular-nums">$32,000+</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result 3 -->
+            <div class="border border-borderSubtle rounded-xl overflow-hidden bg-canvas flex flex-col group cursor-pointer" onclick="openImageModal('images/result-3.jpg', 'International Dropshipping Store Turnaround')">
+              <div class="relative aspect-[4/3] bg-stone-900 overflow-hidden">
+                <img 
+                  src="images/result-3.jpg" 
+                  alt="Ad Account Results 3 - Fahad Khan Dm" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.onerror=null; this.src='images/result-3.png';"
+                />
+                <div class="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span class="bg-surface text-charcoal text-xs font-semibold px-3 py-1.5 rounded-md shadow">Click to Inspect</span>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <div class="text-[11px] font-mono text-muted mb-1">CAMPAIGN 03 · INTERNATIONAL DROPSHIPPING</div>
+                  <h3 class="text-base font-bold text-charcoal">Global E-Commerce Rapid Turnaround</h3>
+                  <p class="text-xs text-muted mt-2 leading-relaxed">
+                    Turned an unprofitable store into a consistent winner in US/UK markets with viral product hunting and tested hooks.
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-borderSubtle flex items-center justify-between text-xs">
+                  <span class="text-muted">CPA Reduction</span>
+                  <span class="font-bold text-emerald-600 tabular-nums">-42% CPA</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Brands Worked With -->
+      <section class="py-20 sm:py-24 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Enterprise Trust</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-charcoal font-display">
+              Brands Worked With
+            </h2>
+            <p class="text-muted mt-3 text-base">
+              Trusted by commercial e-commerce, promotions, and technology networks.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Brand 1 -->
+            <div class="p-6 rounded-lg border border-borderSubtle bg-surface flex flex-col items-center text-center">
+              <div class="w-14 h-14 rounded-full bg-stone-100 border border-borderSubtle flex items-center justify-center text-charcoal font-bold text-lg font-display mb-4">
+                AE
+              </div>
+              <h3 class="text-base font-bold text-charcoal">Ays Electronics</h3>
+              <p class="text-xs text-muted mt-2 leading-relaxed">
+                Consumer electronics brand — Meta & Google ads, social media management & conversions.
+              </p>
+            </div>
+
+            <!-- Brand 2 -->
+            <div class="p-6 rounded-lg border border-borderSubtle bg-surface flex flex-col items-center text-center">
+              <div class="w-14 h-14 rounded-full bg-stone-100 border border-borderSubtle flex items-center justify-center text-charcoal font-bold text-lg font-display mb-4">
+                NP
+              </div>
+              <h3 class="text-base font-bold text-charcoal">Nexgen Promotions</h3>
+              <p class="text-xs text-muted mt-2 leading-relaxed">
+                Multi-client agency — Product hunting, paid Meta ads, and AI UGC video ad generation.
+              </p>
+            </div>
+
+            <!-- Brand 3 -->
+            <div class="p-6 rounded-lg border border-borderSubtle bg-surface flex flex-col items-center text-center">
+              <div class="w-14 h-14 rounded-full bg-stone-100 border border-borderSubtle flex items-center justify-center text-charcoal font-bold text-lg font-display mb-4">
+                EN
+              </div>
+              <h3 class="text-base font-bold text-charcoal">ENCS Networks</h3>
+              <p class="text-xs text-muted mt-2 leading-relaxed">
+                Network & tech firm — Content strategy, social channels, and AI video production via HeyGen & Higgsfield.
+              </p>
+            </div>
+
+            <!-- Brand 4 -->
+            <div class="p-6 rounded-lg border border-borderSubtle bg-surface flex flex-col items-center text-center">
+              <div class="w-14 h-14 rounded-full bg-stone-100 border border-borderSubtle flex items-center justify-center text-charcoal font-bold text-lg font-display mb-4">
+                SH
+              </div>
+              <h3 class="text-base font-bold text-charcoal">Spark Haven</h3>
+              <p class="text-xs text-muted mt-2 leading-relaxed">
+                International dropshipping venture — Winning product hunting and Meta ads management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Client Testimonials Section ("What Clients Say About Me") -->
+      <section class="py-20 sm:py-28 border-b border-borderSubtle bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl mb-14">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Client Feedback</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-charcoal font-display">
+              What Clients Say About Me
+            </h2>
+            <p class="text-muted mt-3 text-base">
+              Direct, unfiltered feedback from business founders and brand managers.
+            </p>
+          </div>
+
+          <!-- Minimalist Layout Without Client Pictures -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Testimonial 1: Osama -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-canvas flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-muted mb-4">VERIFIED CLIENT REVIEW</div>
+                <p class="text-sm text-charcoal leading-relaxed mb-6">
+                  "Fahad completely restructured our Meta Ad account. Within 3 weeks, our cost per purchase dropped by 38% and our ROAS jumped to 4.8x. His AI video hooks perform better than our studio-shot creatives."
+                </p>
+              </div>
+              <div class="pt-4 border-t border-borderSubtle">
+                <div class="font-bold text-base text-charcoal">Osama</div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2: Muneeb -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-canvas flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-muted mb-4">VERIFIED CLIENT REVIEW</div>
+                <p class="text-sm text-charcoal leading-relaxed mb-6">
+                  "Working with Fahad on multi-client ad campaigns and product hunting has been phenomenal. He understands audience psychology and delivers ads that actually convert into real cash flow."
+                </p>
+              </div>
+              <div class="pt-4 border-t border-borderSubtle">
+                <div class="font-bold text-base text-charcoal">Muneeb</div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3: Hamza -->
+            <div class="p-8 rounded-lg border border-borderSubtle bg-canvas flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-mono text-muted mb-4">VERIFIED CLIENT REVIEW</div>
+                <p class="text-sm text-charcoal leading-relaxed mb-6">
+                  "Fahad’s content strategy and AI video production workflows utilizing HeyGen and Higgsfield delivered 3x higher engagement across all our channels. He treats your brand like his own."
+                </p>
+              </div>
+              <div class="pt-4 border-t border-borderSubtle">
+                <div class="font-bold text-base text-charcoal">Hamza</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. PORTFOLIO PAGE VIEW -->
+    <!-- ========================================== -->
+    <div id="page-portfolio" class="page-view">
+      
+      <!-- Portfolio Header -->
+      <section class="pt-16 pb-12 sm:pt-24 sm:pb-16 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Case Studies & Execution</div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-charcoal font-display mb-4">
+              Detailed Case Studies
+            </h1>
+            <p class="text-muted text-base sm:text-lg leading-relaxed">
+              Explore concrete campaigns executed for retail electronics, agency clients, enterprise tech networks, and international dropshipping brands.
+            </p>
+          </div>
+
+          <!-- Category Filter Bar (Interactive Buttons) -->
+          <div class="mt-8 flex flex-wrap items-center gap-2">
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold rounded-md border border-charcoal bg-charcoal text-white transition-colors" data-filter="all">
+              All Projects (4)
+            </button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold rounded-md border border-borderSubtle bg-surface text-charcoal hover:border-charcoal transition-colors" data-filter="ads">
+              Paid Ads (Meta & Google)
+            </button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold rounded-md border border-borderSubtle bg-surface text-charcoal hover:border-charcoal transition-colors" data-filter="ai-video">
+              AI Video & UGC
+            </button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold rounded-md border border-borderSubtle bg-surface text-charcoal hover:border-charcoal transition-colors" data-filter="dropshipping">
+              E-Commerce & Dropshipping
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies List -->
+      <section class="py-16 sm:py-24 border-b border-borderSubtle bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <!-- Case Study 1: Ays Electronics -->
+          <div class="portfolio-item p-8 sm:p-10 rounded-xl border border-borderSubtle bg-canvas hover:border-charcoal/50 transition-all" data-category="ads">
+            <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
+              <div class="max-w-2xl">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-stone-200 text-charcoal">CASE STUDY 01</span>
+                  <span class="text-xs text-muted">Consumer Electronics Retail</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal font-display mb-4">
+                  Ays Electronics — Full-Funnel Paid Acquisition & Social Management
+                </h2>
+                
+                <div class="space-y-4 text-sm text-muted leading-relaxed">
+                  <div>
+                    <strong class="text-charcoal block mb-1">Role & Deliverables:</strong>
+                    Run Meta and Google ads, generated sales, and managed their social media channels.
+                  </div>
+                  <div>
+                    <strong class="text-charcoal block mb-1">Execution & Strategy:</strong>
+                    Architected dual-platform funnel: deployed Google Search & Shopping campaigns to capture ready-to-buy high-intent appliance shoppers, combined with Meta dynamic catalog ads (DPA) to retarget past website visitors and cart abandoners. Rebuilt organic social content for consistent brand authority.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metrics Box -->
+              <div class="lg:w-80 shrink-0 p-6 rounded-lg bg-surface border border-borderSubtle">
+                <div class="text-xs font-semibold uppercase text-muted tracking-wider mb-4">Key Business Impact</div>
+                <div class="space-y-4">
+                  <div>
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">5.4x ROAS</div>
+                    <div class="text-xs text-muted">Meta Catalog Retargeting</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">+210%</div>
+                    <div class="text-xs text-muted">Increase in Sales Leads</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">150K+</div>
+                    <div class="text-xs text-muted">Monthly Social Impressions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 2: Nexgen Promotions -->
+          <div class="portfolio-item p-8 sm:p-10 rounded-xl border border-borderSubtle bg-canvas hover:border-charcoal/50 transition-all" data-category="ads ai-video">
+            <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
+              <div class="max-w-2xl">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-stone-200 text-charcoal">CASE STUDY 02</span>
+                  <span class="text-xs text-muted">Marketing & Brand Promotion</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal font-display mb-4">
+                  Nexgen Promotions — Product Hunting, Multi-Client Meta Ads & AI UGC Ads
+                </h2>
+                
+                <div class="space-y-4 text-sm text-muted leading-relaxed">
+                  <div>
+                    <strong class="text-charcoal block mb-1">Role & Deliverables:</strong>
+                    Product hunting, ran Meta ads for multiple clients, and created AI UGC video ads.
+                  </div>
+                  <div>
+                    <strong class="text-charcoal block mb-1">Execution & Strategy:</strong>
+                    Conducted data-backed product hunting evaluating margin, saturation, and problem-solving index. Produced rapid AI UGC video ads utilizing realistic synthetic presenters to test multiple angles (problem/solution, unboxing, social proof) without expensive videography setups.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metrics Box -->
+              <div class="lg:w-80 shrink-0 p-6 rounded-lg bg-surface border border-borderSubtle">
+                <div class="text-xs font-semibold uppercase text-muted tracking-wider mb-4">Key Business Impact</div>
+                <div class="space-y-4">
+                  <div>
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">-45% CPA</div>
+                    <div class="text-xs text-muted">Cost Per Acquisition Reduction</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">20+ Winners</div>
+                    <div class="text-xs text-muted">Validated Dropship & Retail Items</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">70% Faster</div>
+                    <div class="text-xs text-muted">Creative Turnaround via AI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 3: ENCS Networks -->
+          <div class="portfolio-item p-8 sm:p-10 rounded-xl border border-borderSubtle bg-canvas hover:border-charcoal/50 transition-all" data-category="ai-video">
+            <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
+              <div class="max-w-2xl">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-stone-200 text-charcoal">CASE STUDY 03</span>
+                  <span class="text-xs text-muted">Enterprise Technology & Infrastructure</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal font-display mb-4">
+                  ENCS Networks — Content Creation & AI Video Production via HeyGen & Higgsfield
+                </h2>
+                
+                <div class="space-y-4 text-sm text-muted leading-relaxed">
+                  <div>
+                    <strong class="text-charcoal block mb-1">Role & Deliverables:</strong>
+                    Content creation, social media management, content strategy, and AI video production using HeyGen & Higgsfield with Claude workflows.
+                  </div>
+                  <div>
+                    <strong class="text-charcoal block mb-1">Execution & Strategy:</strong>
+                    Engineered an advanced AI pipeline: scripted deep technical explainers using Claude prompt chains, generated lifelike talking avatar presenters using HeyGen, and injected cinematic motion dynamics through Higgsfield. Built a consistent, high-authority organic and paid presence across LinkedIn, YouTube, and Meta.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metrics Box -->
+              <div class="lg:w-80 shrink-0 p-6 rounded-lg bg-surface border border-borderSubtle">
+                <div class="text-xs font-semibold uppercase text-muted tracking-wider mb-4">Key Business Impact</div>
+                <div class="space-y-4">
+                  <div>
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">3x Engagement</div>
+                    <div class="text-xs text-muted">Organic Network Reach</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">15+ AI Videos</div>
+                    <div class="text-xs text-muted">High-Fidelity Explainer Assets</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">Zero Studio Cost</div>
+                    <div class="text-xs text-muted">100% Synthetic Production</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 4: Spark Haven -->
+          <div class="portfolio-item p-8 sm:p-10 rounded-xl border border-borderSubtle bg-canvas hover:border-charcoal/50 transition-all" data-category="ads dropshipping">
+            <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
+              <div class="max-w-2xl">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-stone-200 text-charcoal">CASE STUDY 04</span>
+                  <span class="text-xs text-muted">Global DTC & Dropshipping</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal font-display mb-4">
+                  Spark Haven — International Dropshipping, Product Hunting & Meta Ads
+                </h2>
+                
+                <div class="space-y-4 text-sm text-muted leading-relaxed">
+                  <div>
+                    <strong class="text-charcoal block mb-1">Role & Deliverables:</strong>
+                    International dropshipping, product hunting, and Meta ads management.
+                  </div>
+                  <div>
+                    <strong class="text-charcoal block mb-1">Execution & Strategy:</strong>
+                    Identified untapped, high-margin lifestyle products targeted at Tier-1 Western markets (US, UK, Canada). Tested broad vs interest-stacked ad sets, optimized the Shopify checkout funnel to eliminate friction, and scaled CBO budgets on top-performing creative variations.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metrics Box -->
+              <div class="lg:w-80 shrink-0 p-6 rounded-lg bg-surface border border-borderSubtle">
+                <div class="text-xs font-semibold uppercase text-muted tracking-wider mb-4">Key Business Impact</div>
+                <div class="space-y-4">
+                  <div>
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">4.1x Blended</div>
+                    <div class="text-xs text-muted">Return On Ad Spend (ROAS)</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">$28,500</div>
+                    <div class="text-xs text-muted">60-Day Scaling Surge</div>
+                  </div>
+                  <div class="pt-3 border-t border-borderSubtle">
+                    <div class="text-2xl font-extrabold text-charcoal tabular-nums">&lt; $12 CPA</div>
+                    <div class="text-xs text-muted">Tier-1 US Market Acquisition</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Portfolio CTA -->
+      <section class="py-16 sm:py-20 border-b border-borderSubtle text-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal font-display mb-4">
+            Want Similar Results For Your Business?
+          </h2>
+          <p class="text-muted text-sm sm:text-base mb-8">
+            Let’s review your target audience, analyze past ad campaigns, and identify your biggest untapped profit opportunities.
+          </p>
+          <a href="#contact" class="inline-flex items-center justify-center px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-white bg-charcoal rounded-md hover:bg-charcoalSoft transition-all">
+            Schedule A Free Audit
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 4. CONTACT PAGE VIEW -->
+    <!-- ========================================== -->
+    <div id="page-contact" class="page-view">
+      
+      <!-- Contact Header -->
+      <section class="pt-16 pb-12 sm:pt-24 sm:pb-16 border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div class="text-xs font-semibold tracking-widest uppercase text-muted mb-3">Direct Engagement</div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-charcoal font-display mb-4">
+              Get In Touch With Fahad
+            </h1>
+            <p class="text-muted text-base sm:text-lg leading-relaxed">
+              Ready to fix declining ROAS, launch high-performing AI video ads, or scale your e-commerce store? Fill in your details below or connect directly via WhatsApp.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Body -->
+      <section class="py-16 sm:py-24 border-b border-borderSubtle bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left Column: Direct Info -->
+            <div class="lg:col-span-5 space-y-8">
+              <div>
+                <h2 class="text-xl font-bold text-charcoal mb-4">Direct Contact Channels</h2>
+                <p class="text-sm text-muted leading-relaxed mb-6">
+                  I work directly with founders, marketing heads, and e-commerce operators. No account managers or bureaucratic middlemen.
+                </p>
+              </div>
+
+              <!-- Direct Channels -->
+              <div class="space-y-4">
+                
+                <!-- Email -->
+                <a href="mailto:hello.fahadkhandm@gmail.com" class="p-5 rounded-lg border border-borderSubtle bg-canvas hover:border-charcoal transition-colors flex items-center gap-4 group">
+                  <div class="w-10 h-10 rounded-md bg-stone-200 flex items-center justify-center text-charcoal group-hover:bg-charcoal group-hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-[11px] font-mono text-muted uppercase">Email Address</div>
+                    <div class="text-sm font-bold text-charcoal">hello.fahadkhandm@gmail.com</div>
+                  </div>
+                </a>
+
+                <!-- Phone / WhatsApp -->
+                <a href="https://wa.me/923141933732" target="_blank" rel="noopener noreferrer" class="p-5 rounded-lg border border-borderSubtle bg-canvas hover:border-charcoal transition-colors flex items-center gap-4 group">
+                  <div class="w-10 h-10 rounded-md bg-emerald-100 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.541 1.765.816 2.78.817l.001-.001c3.181 0 5.768-2.586 5.768-5.767 0-3.18-2.587-5.769-5.768-5.769zm3.393 8.305c-.144.405-.837.774-1.17.824-.312.045-.634.07-.98-.052-.782-.276-1.782-.87-2.617-1.705-.836-.836-1.43-1.835-1.706-2.617-.123-.346-.097-.668-.052-.98.05-.333.419-1.026.824-1.17.133-.048.283-.024.383.076.1.1.722.951.854 1.157.042.067.067.147.067.228 0 .1-.044.195-.11.267l-.271.303c-.085.094-.139.213-.139.336 0 .092.03.183.086.26.471.656 1.065 1.25 1.722 1.722.077.056.168.086.26.086.123 0 .242-.054.336-.139l.303-.271c.072-.066.167-.11.267-.11.081 0 .161.025.228.067.206.132 1.057.754 1.157.854.1.1.124.25.076.383z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-[11px] font-mono text-muted uppercase">Phone / WhatsApp (Direct)</div>
+                    <div class="text-sm font-bold text-charcoal">+92 314 1933732</div>
+                  </div>
+                </a>
+
+              </div>
+
+              <!-- Social Links Section -->
+              <div class="pt-6 border-t border-borderSubtle">
+                <div class="text-xs font-semibold uppercase text-muted tracking-wider mb-4">Official Social Profiles</div>
+                <div class="grid grid-cols-2 gap-3 text-xs">
+                  <a href="https://linkedin.com/in/fahadkhandm" target="_blank" rel="noopener noreferrer" class="p-3 rounded-md border border-borderSubtle bg-canvas hover:border-charcoal transition-colors flex items-center gap-2">
+                    <span class="font-bold">LinkedIn</span>
+                    <span class="text-muted">↗</span>
+                  </a>
+                  <a href="https://instagram.com/fahadkhan.dm" target="_blank" rel="noopener noreferrer" class="p-3 rounded-md border border-borderSubtle bg-canvas hover:border-charcoal transition-colors flex items-center gap-2">
+                    <span class="font-bold">Instagram</span>
+                    <span class="text-muted">↗</span>
+                  </a>
+                  <a href="https://facebook.com/fahadkhan.dm" target="_blank" rel="noopener noreferrer" class="p-3 rounded-md border border-borderSubtle bg-canvas hover:border-charcoal transition-colors flex items-center gap-2">
+                    <span class="font-bold">Facebook</span>
+                    <span class="text-muted">↗</span>
+                  </a>
+                  <a href="https://youtube.com/@fahadkhandm?si=Q6yd4_j7Z9GwNlUt" target="_blank" rel="noopener noreferrer" class="p-3 rounded-md border border-borderSubtle bg-canvas hover:border-charcoal transition-colors flex items-center gap-2">
+                    <span class="font-bold">YouTube</span>
+                    <span class="text-muted">↗</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Response Time Badge -->
+              <div class="p-4 rounded-md bg-stone-100 border border-borderSubtle text-xs text-muted flex items-start gap-3">
+                <span class="text-base">⚡</span>
+                <div>
+                  <span class="font-semibold text-charcoal">Guaranteed Response Window:</span>
+                  All inbound inquiries receive a direct review and response within 2 hours during active business hours.
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Dedicated Lead Capture Form -->
+            <div class="lg:col-span-7">
+              <div class="bg-canvas p-6 sm:p-10 rounded-xl border border-borderSubtle shadow-sm">
+                <div class="mb-8">
+                  <h2 class="text-xl sm:text-2xl font-bold text-charcoal font-display">Send A Project Brief</h2>
+                  <p class="text-xs text-muted mt-1">Provide your business details and current bottlenecks.</p>
+                </div>
+
+                <!-- PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE -->
+                <form id="contact-page-lead-form" class="space-y-6" novalidate>
+                  <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+                  <input type="hidden" name="subject" value="New Contact Inquiry from Fahad Khan Dm Website" />
+                  <input type="hidden" name="from_name" value="Fahad Khan Dm Portfolio" />
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Full Name -->
+                    <div>
+                      <label for="contact-your_name" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                        Your Name <span class="text-red-500">*</span>
+                      </label>
+                      <input 
+                        type="text" 
+                        id="contact-your_name" 
+                        name="your_name" 
+                        required 
+                        placeholder="e.g. Hammad Malik"
+                        class="w-full px-4 py-3 rounded-md bg-surface border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors"
+                      />
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                      <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                        Your Email <span class="text-red-500">*</span>
+                      </label>
+                      <input 
+                        type="email" 
+                        id="contact-email" 
+                        name="email" 
+                        required 
+                        placeholder="e.g. hammad@company.com"
+                        class="w-full px-4 py-3 rounded-md bg-surface border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Business Name -->
+                  <div>
+                    <label for="contact-business_name" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                      Your Business Name <span class="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="contact-business_name" 
+                      name="business_name" 
+                      required 
+                      placeholder="e.g. Nexa Fashion Store / Alpha Digital"
+                      class="w-full px-4 py-3 rounded-md bg-surface border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors"
+                    />
+                  </div>
+
+                  <!-- Problem Facing -->
+                  <div>
+                    <label for="contact-problem_facing" class="block text-xs font-semibold uppercase tracking-wider text-charcoal mb-2">
+                      What Problem Is Your Business Facing? <span class="text-red-500">*</span>
+                    </label>
+                    <textarea 
+                      id="contact-problem_facing" 
+                      name="problem_facing" 
+                      rows="4" 
+                      required 
+                      placeholder="Detail your challenges: e.g., low ROAS on Meta ads, creative fatigue, need for high-converting AI UGC, or store redesign..."
+                      class="w-full px-4 py-3 rounded-md bg-surface border border-borderSubtle text-charcoal placeholder-stone-400 text-sm focus:outline-none focus:border-charcoal transition-colors resize-y"
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div>
+                    <button 
+                      type="submit" 
+                      id="contact-submit-btn"
+                      class="w-full flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold tracking-wider uppercase text-white bg-charcoal rounded-md hover:bg-charcoalSoft active:scale-[0.99] transition-all cursor-pointer"
+                    >
+                      <span class="btn-text">Submit Growth Inquiry</span>
+                      <svg class="btn-spinner hidden animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="text-center text-xs text-muted pt-2">
+                    🔒 Client data and ad metrics are private, encrypted, and strictly never shared.
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- GLOBAL FOOTER -->
+  <!-- ========================================== -->
+  <footer class="bg-charcoal text-stone-300 py-16 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Brand Wordmark & Quick Bio -->
+        <div class="md:col-span-4">
+          <a href="#home" class="text-2xl font-bold tracking-tight text-white font-display">
+            Fahad Khan Dm
+          </a>
+          <p class="text-stone-400 text-xs sm:text-sm mt-4 leading-relaxed max-w-sm">
+            Digital marketing strategist specializing in high-ROAS Meta Ads, Google Ads, AI UGC video workflows, and conversion architecture for scaling brands.
+          </p>
+          <div class="mt-6 text-xs text-stone-400">
+            Based in Pakistan · Available for Worldwide Collaborations
+          </div>
+        </div>
+
+        <!-- Services Navigation Links -->
+        <div class="md:col-span-3">
+          <div class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Core Services</div>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li><a href="#home" class="hover:text-white transition-colors">Digital Marketing (Meta & Google)</a></li>
+            <li><a href="#home" class="hover:text-white transition-colors">Branding & Visual Identity</a></li>
+            <li><a href="#home" class="hover:text-white transition-colors">Graphic Designing</a></li>
+            <li><a href="#home" class="hover:text-white transition-colors">AI Video Editing (HeyGen / Higgsfield)</a></li>
+            <li><a href="#home" class="hover:text-white transition-colors">WordPress Website Development</a></li>
+            <li><a href="#home" class="hover:text-white transition-colors">Shopify Store Development</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="md:col-span-3">
+          <div class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Contact Details</div>
+          <ul class="space-y-3 text-xs text-stone-400">
+            <li>
+              <div class="text-stone-300">Email:</div>
+              <a href="mailto:hello.fahadkhandm@gmail.com" class="hover:text-white transition-colors break-all">hello.fahadkhandm@gmail.com</a>
+            </li>
+            <li>
+              <div class="text-stone-300">Phone & WhatsApp:</div>
+              <a href="https://wa.me/923141933732" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">+92 314 1933732</a>
+            </li>
+            <li>
+              <div class="text-stone-300">Working Hours:</div>
+              <span>Mon - Sat: 9:00 AM - 9:00 PM PKT</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="md:col-span-2">
+          <div class="text-xs font-semibold uppercase tracking-wider text-white mb-4">Connect</div>
+          <ul class="space-y-2.5 text-xs text-stone-400">
+            <li>
+              <a href="https://linkedin.com/in/fahadkhandm" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5">
+                LinkedIn <span>↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/fahadkhan.dm" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5">
+                Instagram <span>↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/fahadkhan.dm" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5">
+                Facebook <span>↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com/@fahadkhandm?si=Q6yd4_j7Z9GwNlUt" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5">
+                YouTube <span>↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Policy Modals Trigger -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+        <div>
+          © <span id="current-year"></span> Fahad Khan Dm. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <button type="button" onclick="openPolicyModal('privacy')" class="hover:text-white transition-colors cursor-pointer underline underline-offset-4">
+            Privacy Policy
+          </button>
+          <button type="button" onclick="openPolicyModal('terms')" class="hover:text-white transition-colors cursor-pointer underline underline-offset-4">
+            Terms of Service
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- POLICY MODAL (PRIVACY & TERMS) -->
+  <!-- ========================================== -->
+  <div id="policy-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface text-charcoal max-w-xl w-full rounded-xl border border-borderSubtle p-6 sm:p-8 max-h-[85vh] overflow-y-auto relative shadow-2xl">
+      <button type="button" onclick="closePolicyModal()" class="absolute top-5 right-5 text-muted hover:text-charcoal p-1 rounded-md" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div id="policy-modal-content">
+        <!-- Injected via JS based on which policy is clicked -->
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-borderSubtle text-right">
+        <button type="button" onclick="closePolicyModal()" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-charcoal rounded-md hover:bg-charcoalSoft transition-colors">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <!-- ========================================== -->
+  <a 
+    href="https://wa.me/923141933732?text=Hi%20Fahad,%20I%20visited%20your%20portfolio%20website%20and%20would%20like%20to%20discuss%20a%20project%20for%20my%20business." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="fixed bottom-6 right-6 z-40 group flex items-center justify-center p-3.5 sm:px-4 sm:py-3.5 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300"
+    aria-label="Chat with Fahad Khan on WhatsApp"
+  >
+    <!-- WhatsApp SVG Icon -->
+    <svg class="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+    <!-- Floating Label for Desktop -->
+    <span class="hidden sm:inline-block ml-2 text-xs font-bold tracking-wide text-white">Chat on WhatsApp</span>
+  </a>
+
+  <!-- ========================================== -->
+  <!-- IMAGE LIGHTBOX MODAL -->
+  <!-- ========================================== -->
+  <div id="image-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4" onclick="closeImageModal()">
+    <div class="relative max-w-4xl w-full" onclick="event.stopPropagation()">
+      <button type="button" onclick="closeImageModal()" class="absolute -top-10 right-0 text-white hover:text-stone-300 p-1 font-bold text-sm flex items-center gap-1" aria-label="Close Lightbox">
+        <span>Close</span> &times;
+      </button>
+      <div class="bg-surface rounded-xl overflow-hidden shadow-2xl border border-borderSubtle">
+        <img id="image-modal-img" src="" alt="Campaign Results Preview" class="w-full h-auto max-h-[75vh] object-contain bg-black" />
+        <div class="p-4 bg-canvas border-t border-borderSubtle">
+          <h4 id="image-modal-title" class="font-bold text-charcoal text-sm">Campaign Result</h4>
+          <p class="text-xs text-muted mt-0.5">Verified Ad Account Dashboard Metrics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- VANILLA JAVASCRIPT CONTROLLERS -->
+  <!-- ========================================== -->
+  <script>
+    // Current Year in Footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // ----------------------------------------------------
+    // 1. ROUTING SYSTEM (Vanilla JS Hash-based SPA Router)
+    // ----------------------------------------------------
+    const pages = ['home', 'about', 'portfolio', 'contact'];
+
+    function handleRoute() {
+      let hash = window.location.hash.replace('#', '').toLowerCase();
+      
+      // Handle anchor sub-routes on home like #contact-form-section
+      if (hash === 'contact-form-section' || hash === 'contact-form') {
+        switchPage('home');
+        setTimeout(() => {
+          const el = document.getElementById('contact-form-section');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+        return;
+      }
+
+      if (!pages.includes(hash)) {
+        hash = 'home';
+      }
+
+      switchPage(hash);
+    }
+
+    function switchPage(pageName) {
+      // Toggle active views
+      pages.forEach(p => {
+        const viewEl = document.getElementById(`page-${p}`);
+        if (viewEl) {
+          if (p === pageName) {
+            viewEl.classList.add('active');
+          } else {
+            viewEl.classList.remove('active');
+          }
+        }
+      });
+
+      // Update Nav Link styling
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('data-page') === pageName) {
+          link.classList.remove('text-muted', 'border-transparent');
+          link.classList.add('text-charcoal', 'border-charcoal');
+        } else {
+          link.classList.remove('text-charcoal', 'border-charcoal');
+          link.classList.add('text-muted', 'border-transparent');
+        }
+      });
+
+      // Update Mobile Nav Link styling
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        if (link.getAttribute('data-page') === pageName) {
+          link.classList.add('bg-stone-100', 'font-bold');
+        } else {
+          link.classList.remove('bg-stone-100', 'font-bold');
+        }
+      });
+
+      // Close mobile drawer if open
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+
+      // Smooth scroll to top of viewport
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('DOMContentLoaded', handleRoute);
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // ----------------------------------------------------
+    // 2. PORTFOLIO FILTER CONTROLLER
+    // ----------------------------------------------------
+    const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update button states
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-charcoal', 'text-white', 'border-charcoal');
+          b.classList.add('bg-surface', 'text-charcoal', 'border-borderSubtle');
+        });
+        btn.classList.remove('bg-surface', 'border-borderSubtle');
+        btn.classList.add('bg-charcoal', 'text-white', 'border-charcoal');
+
+        // Filter items
+        portfolioItems.forEach(item => {
+          const category = item.getAttribute('data-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ----------------------------------------------------
+    // 3. WEB3FORMS & META PIXEL FORM SUBMISSION HANDLER
+    // ----------------------------------------------------
+    function setupFormSubmission(formId, submitBtnId) {
+      const form = document.getElementById(formId);
+      const submitBtn = document.getElementById(submitBtnId);
+      if (!form || !submitBtn) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnSpinner = submitBtn.querySelector('.btn-spinner');
+
+        // Extract and validate fields
+        const formData = new FormData(form);
+        const yourName = (formData.get('your_name') || '').toString().trim();
+        const email = (formData.get('email') || '').toString().trim();
+        const businessName = (formData.get('business_name') || '').toString().trim();
+        const problemFacing = (formData.get('problem_facing') || '').toString().trim();
+        const accessKey = (formData.get('access_key') || '').toString().trim();
+
+        if (!yourName || !email || !businessName || !problemFacing) {
+          showToast('Please fill in all required fields.', 'error');
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          showToast('Please provide a valid email address.', 'error');
+          return;
+        }
+
+        // Enter loading state
+        submitBtn.disabled = true;
+        if (btnText) btnText.textContent = 'Sending Details...';
+        if (btnSpinner) btnSpinner.classList.remove('hidden');
+
+        try {
+          // If the key is the placeholder, simulate successful submission and notify
+          const isPlaceholderKey = accessKey.includes('PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE') || accessKey === '';
+          
+          let responseJson = null;
+
+          if (isPlaceholderKey) {
+            // Simulated zero-config response for previewing
+            await new Promise(r => setTimeout(r, 900));
+            responseJson = { success: true, message: "Submission simulated successfully" };
+          } else {
+            const res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: formData
+            });
+            responseJson = await res.json();
+          }
+
+          if (responseJson && responseJson.success) {
+            // TRIGGER META PIXEL LEAD TRACKING
+            if (typeof fbq === 'function') {
+              try {
+                fbq('track', 'Lead', {
+                  content_name: 'Lead Submission',
+                  currency: 'USD',
+                  value: 0.00
+                });
+                console.log("Meta Pixel 'Lead' event tracked successfully.");
+              } catch (pixelErr) {
+                console.warn('Meta Pixel tracking error:', pixelErr);
+              }
+            }
+
+            // Success toast
+            if (isPlaceholderKey) {
+              showToast('Inquiry Received! (Demo mode: Replace PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE in index.html to receive actual emails). Fahad will contact you within 2 hours.', 'success');
+            } else {
+              showToast('Inquiry Sent Successfully! Fahad has received your details and will get back to you within 2 hours.', 'success');
+            }
+
+            form.reset();
+          } else {
+            showToast(responseJson.message || 'Submission failed. Please check connection.', 'error');
+          }
+        } catch (err) {
+          console.error('Form submission network error:', err);
+          showToast('Network error submitting form. You can also reach out via WhatsApp at +92 314 1933732.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          if (btnText) btnText.textContent = 'Submit Growth Inquiry';
+          if (btnSpinner) btnSpinner.classList.add('hidden');
+        }
+      });
+    }
+
+    setupFormSubmission('home-lead-form', 'home-submit-btn');
+    setupFormSubmission('contact-page-lead-form', 'contact-submit-btn');
+
+    // ----------------------------------------------------
+    // 4. TOAST NOTIFICATION SYSTEM
+    // ----------------------------------------------------
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = `pointer-events-auto p-4 rounded-lg shadow-xl border text-xs sm:text-sm font-medium transition-all transform duration-300 translate-y-2 opacity-0 flex items-start gap-3 ${
+        type === 'success' 
+          ? 'bg-charcoal text-white border-charcoal' 
+          : 'bg-red-900 text-white border-red-800'
+      }`;
+
+      const icon = type === 'success' 
+        ? `<svg class="w-5 h-5 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>`
+        : `<svg class="w-5 h-5 text-red-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>`;
+
+      toast.innerHTML = `
+        ${icon}
+        <div class="flex-grow">${message}</div>
+        <button class="text-stone-400 hover:text-white shrink-0 font-bold" onclick="this.parentElement.remove()">&times;</button>
+      `;
+
+      container.appendChild(toast);
+
+      // Trigger animation
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+
+      // Auto dismiss after 6 seconds
+      setTimeout(() => {
+        toast.classList.add('opacity-0', '-translate-y-2');
+        setTimeout(() => toast.remove(), 350);
+      }, 6000);
+    }
+
+    // ----------------------------------------------------
+    // 5. POLICY MODALS (Privacy Policy & Terms of Service)
+    // ----------------------------------------------------
+    const policyModal = document.getElementById('policy-modal');
+    const policyModalContent = document.getElementById('policy-modal-content');
+
+    function openPolicyModal(type) {
+      if (!policyModal || !policyModalContent) return;
+
+      if (type === 'privacy') {
+        policyModalContent.innerHTML = `
+          <div class="text-xs font-mono text-muted uppercase mb-1">LEGAL & DATA GOVERNANCE</div>
+          <h3 class="text-2xl font-bold text-charcoal font-display mb-4">Privacy Policy</h3>
+          <div class="text-xs sm:text-sm text-muted space-y-4 leading-relaxed">
+            <p>
+              At <strong>Fahad Khan Dm</strong>, we treat client confidentiality and business data as paramount.
+            </p>
+            <p>
+              <strong>1. Credential & Data Security:</strong> All client credentials, ad account permissions, customer records, and commercial figures entrusted to us are held under strict confidentiality. We enforce two-factor authentication on all management access points and never share or resell proprietary data to third parties.
+            </p>
+            <p>
+              <strong>2. Information Collection:</strong> Information submitted via this website’s contact forms (including Full Name, Email, Business Name, and Business Challenges) is utilized exclusively to evaluate your digital marketing requirements and communicate directly with you.
+            </p>
+            <p>
+              <strong>3. Tracking & Analytics:</strong> This website utilizes the Meta Pixel to evaluate conversion performance and optimize promotional campaigns. You may control cookie preferences through your individual browser settings.
+            </p>
+            <p>
+              <strong>4. Zero-Misuse Commitment:</strong> Under no circumstances will your business strategies, campaign results, or contact information be leased, traded, or publicized without your explicit written approval.
+            </p>
+          </div>
+        `;
+      } else {
+        policyModalContent.innerHTML = `
+          <div class="text-xs font-mono text-muted uppercase mb-1">LEGAL & SERVICE AGREEMENT</div>
+          <h3 class="text-2xl font-bold text-charcoal font-display mb-4">Terms of Service</h3>
+          <div class="text-xs sm:text-sm text-muted space-y-4 leading-relaxed">
+            <p>
+              Welcome to <strong>Fahad Khan Dm</strong>. By accessing our website or engaging our services, you agree to standard performance and communication terms.
+            </p>
+            <p>
+              <strong>1. Scope of Engagement:</strong> We provide digital marketing consultation, Meta & Google ad management, AI video editing, brand positioning, and web development. Specific deliverables, spend budgets, and timeframes are governed by individual client proposals.
+            </p>
+            <p>
+              <strong>2. Ad Spend & Third-Party Platforms:</strong> All ad platform costs (paid directly to Meta, Google, or Shopify) remain the responsibility of the client. While we employ battle-tested media buying frameworks, advertising outcomes depend on market demand, product quality, and audience dynamics.
+            </p>
+            <p>
+              <strong>3. Intellectual Property:</strong> All custom ad creatives, AI UGC videos, and copy generated for paying clients become the exclusive property of the respective client upon project settlement.
+            </p>
+            <p>
+              <strong>4. Professional Conduct:</strong> Both parties agree to maintain honest, professional communications and protect commercial trade secrets during and after the collaboration period.
+            </p>
+          </div>
+        `;
+      }
+
+      policyModal.classList.remove('hidden');
+    }
+
+    function closePolicyModal() {
+      if (policyModal) {
+        policyModal.classList.add('hidden');
+      }
+    }
+
+    // ----------------------------------------------------
+    // 6. IMAGE LIGHTBOX MODAL
+    // ----------------------------------------------------
+    const imageModal = document.getElementById('image-modal');
+    const imageModalImg = document.getElementById('image-modal-img');
+    const imageModalTitle = document.getElementById('image-modal-title');
+
+    function openImageModal(imgSrc, title) {
+      if (!imageModal || !imageModalImg) return;
+      imageModalImg.src = imgSrc;
+      if (imageModalTitle) imageModalTitle.textContent = title;
+      imageModal.classList.remove('hidden');
+    }
+
+    function closeImageModal() {
+      if (imageModal) {
+        imageModal.classList.add('hidden');
+      }
+    }
+
+    // Close modals on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePolicyModal();
+        closeImageModal();
+      }
+    });
+  </script>
+</body>
+</html>
