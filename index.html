@@ -1548,9 +1548,11 @@
       });
     });
 
+   // ----------------------------------------------------
+    // 3. GOOGLE SHEETS & META PIXEL FORM SUBMISSION HANDLER
     // ----------------------------------------------------
-    // 3. WEB3FORMS & META PIXEL FORM SUBMISSION HANDLER
-    // ----------------------------------------------------
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbgGWaPYkrWPqnU_z_-K9KUVunkxvo7DqvYxQQ16C_NTS8YhX5_2IYuOu51_K6cQ_r/exec';
+
     function setupFormSubmission(formId, submitBtnId) {
       const form = document.getElementById(formId);
       const submitBtn = document.getElementById(submitBtnId);
@@ -1568,7 +1570,6 @@
         const email = (formData.get('email') || '').toString().trim();
         const businessName = (formData.get('business_name') || '').toString().trim();
         const problemFacing = (formData.get('problem_facing') || '').toString().trim();
-        const accessKey = (formData.get('access_key') || '').toString().trim();
 
         if (!yourName || !email || !businessName || !problemFacing) {
           showToast('Please fill in all required fields.', 'error');
@@ -1583,55 +1584,37 @@
 
         // Enter loading state
         submitBtn.disabled = true;
-        if (btnText) btnText.textContent = 'Sending Details...';
+        if (btnText) btnText.textContent = 'Submitting Details...';
         if (btnSpinner) btnSpinner.classList.remove('hidden');
 
         try {
-          // If the key is the placeholder, simulate successful submission and notify
-          const isPlaceholderKey = accessKey.includes('PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE') || accessKey === '';
-          
-          let responseJson = null;
+          // Send data to Google Apps Script (Google Sheets)
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+          });
 
-          if (isPlaceholderKey) {
-            // Simulated zero-config response for previewing
-            await new Promise(r => setTimeout(r, 900));
-            responseJson = { success: true, message: "Submission simulated successfully" };
-          } else {
-            const res = await fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              body: formData
-            });
-            responseJson = await res.json();
+          // TRIGGER META PIXEL LEAD TRACKING
+          if (typeof fbq === 'function') {
+            try {
+              fbq('track', 'Lead', {
+                content_name: 'Lead Submission',
+                currency: 'USD',
+                value: 0.00
+              });
+              console.log("Meta Pixel 'Lead' event tracked successfully.");
+            } catch (pixelErr) {
+              console.warn('Meta Pixel tracking error:', pixelErr);
+            }
           }
 
-          if (responseJson && responseJson.success) {
-            // TRIGGER META PIXEL LEAD TRACKING
-            if (typeof fbq === 'function') {
-              try {
-                fbq('track', 'Lead', {
-                  content_name: 'Lead Submission',
-                  currency: 'USD',
-                  value: 0.00
-                });
-                console.log("Meta Pixel 'Lead' event tracked successfully.");
-              } catch (pixelErr) {
-                console.warn('Meta Pixel tracking error:', pixelErr);
-              }
-            }
+          // Success notification
+          showToast('Inquiry Sent Successfully! Your details have been recorded. Fahad will review and contact you within 2 hours.', 'success');
+          form.reset();
 
-            // Success toast
-            if (isPlaceholderKey) {
-              showToast('Inquiry Received! (Demo mode: Replace PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE in index.html to receive actual emails). Fahad will contact you within 2 hours.', 'success');
-            } else {
-              showToast('Inquiry Sent Successfully! Fahad has received your details and will get back to you within 2 hours.', 'success');
-            }
-
-            form.reset();
-          } else {
-            showToast(responseJson.message || 'Submission failed. Please check connection.', 'error');
-          }
         } catch (err) {
-          console.error('Form submission network error:', err);
+          console.error('Submission error:', err);
           showToast('Network error submitting form. You can also reach out via WhatsApp at +92 314 1933732.', 'error');
         } finally {
           submitBtn.disabled = false;
@@ -1642,9 +1625,7 @@
     }
 
     setupFormSubmission('home-lead-form', 'home-submit-btn');
-    setupFormSubmission('contact-page-lead-form', 'contact-submit-btn');
-
-    // ----------------------------------------------------
+    setupFormSubmission('contact-page-lead-form', 'contact-submit-btn');    // ----------------------------------------------------
     // 4. TOAST NOTIFICATION SYSTEM
     // ----------------------------------------------------
     function showToast(message, type = 'success') {
